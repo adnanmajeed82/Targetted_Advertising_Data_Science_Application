@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Targeted Ads</title>
+</head>
+<body>
+    <h1>Ads based on your interests:</h1>
+    {% for ad in ads %}
+        <div class="ad">
+            <h2>{{ ad.title }}</h2>
+            <a href="{{ ad.link }}">View Ad</a>
+            {% if ad.image_url %}
+                <img src="{{ ad.log.jpg }}" alt="Ad Image">
+            {% endif %}
+        </div>
+    {% endfor %}
+    <form action="/">
+        <label for="interests">Enter your interests (comma-separated):</label>
+        <input type="text" id="interests" name="interests">
+        <button type="submit">Get Ads</button>
+    </form>
+</body>
+</html>

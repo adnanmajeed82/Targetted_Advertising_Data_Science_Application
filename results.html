@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Targeted Ads</title>
+</head>
+<body>
+    <h1>Targeted Ads for You:</h1>
+    {% for ad in ads %}
+        <div class="ad">
+            <h2>{{ ad.title }}</h2>
+            <p>{{ ad.description }}</p>
+
+            <a href="{{ ad.link }}" target="_blank"><img src="{{ logo.jpg }}" alt="Ad"></a>
+        </div>
+    {% endfor %}
+<img src="logo.jpg" alt="Girl in a jacket" width="500" height="600">
+</body>
+</html>
